@@ -992,7 +992,7 @@ hr{
     max-width: 410px;
     height: 500px;
   }
-  .tarif__price{
+  .tarif__price,.tarif__price1{
     padding: 0;
   }
   .about1__content{
@@ -1002,6 +1002,10 @@ hr{
     padding-top: 15px;
   }
   .tarif__price{
+    padding-top: 11px;
+    width: 78%;
+  }
+  .tarif__price1{
     padding-top: 11px;
     width: 78%;
   }
@@ -1133,5 +1137,11 @@ hr{
   }
   .footer__contact{
     margin-left: 25px;
+  }
+  .header__title{
+    font-size: 40px;
+  }
+  .header__text{
+    font-size: 15px;
   }
 }

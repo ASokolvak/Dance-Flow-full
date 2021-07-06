@@ -25,7 +25,7 @@ $(function () {
     
     $('body').toggleClass('lock');
   });
-  $(".menu a, .logo, .header__btn").on("click", function (e) {
+  $(".menu a, .logo, .header__btn, .program__btn").on("click", function (e) {
 
     e.preventDefault();
     var id = $(this).attr('href'),
@@ -74,6 +74,20 @@ $(function () {
 
   }, 1000)
 
-  
+  $("form").submit(function () { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function () {
+      alert("Thank you!");
+      setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
 
 });
